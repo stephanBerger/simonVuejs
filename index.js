@@ -9,7 +9,8 @@ const vm = new Vue({
         sequence:[],
         tmp:[],
         squareMapping:['hautGauche','hautDroite','basGauche','basDroite'],
-        score:0
+        score:0,
+        meilleurScore:0
     },
     methods:{
         allGray(){
@@ -62,6 +63,9 @@ const vm = new Vue({
                 },400)
             } else {
                 alert(`Perdu!!, Votre score est de: ${this.score}`);
+                if(this.score > this.meilleurScore){
+                    this.meilleurScore = this.score;
+                }
                 this.score = 0;
                 this.sequence = [];
                 this.tmp = []

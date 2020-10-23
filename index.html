@@ -11,10 +11,10 @@
     <body>
         <div id="app" class="container mt-5">
             <button @click="newGame">
-                Nouvelle partie
+                Nouvelle partie 
             </button>
             <hr>
-            Votre score est de : {{score}}
+            Votre score est de : {{score}}  <h1>le meilleur score est de : {{ meilleurScore}}</h1>
             <hr>
             <div>
                 <span class="carre" @click="instruction('hautGauche')" :class="{ bleu: hautGauche}"></span>
